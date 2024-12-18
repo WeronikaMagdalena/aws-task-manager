@@ -1,0 +1,4 @@
+REACT_APP_AUTH_REGION=${reactRegion}
+REACT_APP_AUTH_USER_POOL_ID=${reactUserPoolId}
+REACT_APP_AUTH_USER_POOL_WEB_CLIENT_ID=${reactUserPoolClientId}
+REACT_APP_API_GATEWAY_URL=${reactApiGateway}
