@@ -13,19 +13,20 @@ data "template_file" "example" {
     aws_elastic_beanstalk_environment.backend_app_env,
     aws_cognito_user_pool.pool,
     aws_cognito_user_pool_client.client
+    # aws_api_gateway_deployment.ApiDeployment
   ]
   template = file("env.tpl")
   vars = {
     reactRegion           = var.aws_region
     reactUserPoolId       = aws_cognito_user_pool.pool.id
     reactUserPoolClientId = aws_cognito_user_pool_client.client.id
-    reactApiGateway       = aws_api_gateway_deployment.ApiDeployment.invoke_url
+    reactApiGateway       = "http://${aws_elastic_beanstalk_environment.backend_app_env.endpoint_url}" # aws_api_gateway_deployment.ApiDeployment.invoke_url
   }
 }
 
 resource "local_file" "generated_file" {
   content  = data.template_file.example.rendered
-  filename = "${path.module}/../../frontend/.env"
+  filename = "${path.module}/../frontend/.env"
 }
 
 locals {
@@ -40,7 +41,7 @@ resource "aws_ecr_repository" "frontend_repository" {
 resource "null_resource" "docker_build_frontend" {
   depends_on = [data.template_file.example]
   provisioner "local-exec" {
-    command = "docker build -t task_manager_frontend_repo:latest ${path.module}/../../frontend"
+    command = "docker build -t task_manager_frontend_repo:latest ${path.module}/../frontend"
   }
 
   provisioner "local-exec" {

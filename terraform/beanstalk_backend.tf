@@ -13,7 +13,7 @@ resource "aws_ecr_repository" "backend_repository" {
 
 resource "null_resource" "docker_build_backend" {
   provisioner "local-exec" {
-    command = "docker build -t task_manager_backend_repo:latest ${path.module}/sources" # later can point to backend jar directly (and Dockerfile there)
+    command = "docker build -t task_manager_backend_repo:latest ${path.module}/../backend"
   }
 
   provisioner "local-exec" {
