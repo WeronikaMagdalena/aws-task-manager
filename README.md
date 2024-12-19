@@ -105,23 +105,8 @@ The **Task Manager Application** is a full-stack project built using a **Spring 
    cd <repository-folder>
    ```
 
-3. **Build Docker Images**:
-   - **Backend**:
-     ```bash
-     docker build -t task_manager_backend_repo:latest ./backend
-     ```
-   - **Frontend**:
-     ```bash
-     docker build -t task_manager_frontend_repo:latest ./frontend
-     ```
-
-4. **Run Locally**:
-   ```bash
-   docker-compose up
-   ```
-
 ## Deployment Steps
-1. **Terraform Setup**:
+**Terraform Setup**:
    - Initialize Terraform:
      ```bash
      terraform init
@@ -130,11 +115,4 @@ The **Task Manager Application** is a full-stack project built using a **Spring 
      ```bash
      terraform apply
      ```
-     
-3. **Monitor Elastic Beanstalk Environments** via the AWS Console.
-
-## Environment Variables
-- **DB_URL**: PostgreSQL database connection string.
-- **DB_USERNAME**: PostgreSQL username.
-- **DB_PASSWORD**: PostgreSQL password.
 
