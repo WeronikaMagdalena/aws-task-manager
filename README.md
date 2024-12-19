@@ -98,7 +98,7 @@ The **Task Manager Application** is a full-stack project built using a **Spring 
 
 2. **Clone Repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/WeronikaMagdalena/aws-task-manager.git
    cd <repository-folder>
    ```
 
