@@ -69,9 +69,6 @@ The **Task Manager Application** is a full-stack project built using a **Spring 
 - Handles user authentication and authorization.
 - Generates user pool and client ID used by the frontend for authentication.
 
-### 6. **CloudWatch**
-- Monitors application logs and metrics.
-
 ## Terraform Configuration Highlights
 ### Backend
 - **ECR Repository**: `task_manager_backend_repo`
