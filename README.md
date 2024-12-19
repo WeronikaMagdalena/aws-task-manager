@@ -113,6 +113,6 @@ The **Task Manager Application** is a full-stack project built using a **Spring 
      ```
    - Apply Configuration:
      ```bash
-     terraform apply
+     apply.bat
      ```
 
