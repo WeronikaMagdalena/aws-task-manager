@@ -101,9 +101,8 @@ The **Task Manager Application** is a full-stack project built using a **Spring 
    git clone https://github.com/WeronikaMagdalena/aws-task-manager.git
    cd aws-task-manager
    ```
-
-## Deployment Steps
-**Terraform Setup**:
+   
+3. **Deploy**:
    - Initialize Terraform:
      ```bash
      terraform init
