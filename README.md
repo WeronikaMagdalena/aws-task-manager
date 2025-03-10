@@ -102,7 +102,7 @@ The **Task Manager Application** is a full-stack project built using a **Spring 
    cd aws-task-manager
    ```
    
-3. **Deploy**:
+3. **Provisioning and Deployment**:
    - Initialize Terraform:
      ```bash
      terraform init
